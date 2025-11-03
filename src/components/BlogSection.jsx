@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import posts from "../data/posts.js";
 
 export default function BlogSection(){
@@ -9,7 +10,16 @@ export default function BlogSection(){
         <div className="card bg-brand/20 border-white/10 p-6">
           <div className="text-sm text-white/70">{featured.date}</div>
           <h3 className="text-2xl font-extrabold mt-2">{featured.title}</h3>
-          <p className="text-white/80 mt-2">{featured.excerpt}</p>
+          {featured.excerpt && (
+            <p className="text-white/80 mt-4 italic">{featured.excerpt}</p>
+          )}
+          {featured.content && (
+            <div className="mt-6 space-y-4 text-sm leading-relaxed text-white/80">
+              {featured.content.map((paragraph, idx) => (
+                <p key={idx} className="text-base">{paragraph}</p>
+              ))}
+            </div>
+          )}
         </div>
         <div className="space-y-6">
           {rest.map(p => (
@@ -20,6 +30,9 @@ export default function BlogSection(){
             </div>
           ))}
         </div>
+      </div>
+      <div className="container-max mt-10">
+        <Link to="/blogs" className="btn bg-white text-brand font-semibold">View All Posts</Link>
       </div>
     </section>
   )

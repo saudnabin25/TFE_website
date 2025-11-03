@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
+import Blog from "./pages/Blog.jsx";
 import TeamMember from "./pages/TeamMember.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
@@ -13,6 +14,7 @@ export default function App(){
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/blogs" element={<Blog />} />
           <Route path="/team/:id" element={<TeamMember />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

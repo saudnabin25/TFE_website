@@ -25,7 +25,7 @@ export default function TeamSection(){
         ))}
       </div>
 
-      <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6">
         {filteredTeam.map(m => (
           <Link key={m.id} to={`/team/${m.id}`} className="card p-4 flex flex-col items-center hover:shadow-lg">
             <img src={m.photo} alt={m.name} className="w-28 h-28 rounded-full object-cover shadow-md" />

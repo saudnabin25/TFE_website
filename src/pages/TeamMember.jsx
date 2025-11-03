@@ -42,7 +42,7 @@ export default function TeamMember(){
           </button>
         ))}
       </div>
-      <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
         {filteredTeam.map(member => (
           <Link key={member.id} to={`/team/${member.id}`} className="card p-4 flex flex-col items-center">
             <img src={member.photo} className="w-24 h-24 rounded-full object-cover" />
