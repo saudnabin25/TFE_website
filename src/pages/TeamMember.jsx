@@ -2,6 +2,12 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import team from "../data/team.js";
 
+const socialStyles = {
+  facebook: { label: "Facebook", className: "bg-[#1877F2]", text: "f" },
+  instagram: { label: "Instagram", className: "bg-gradient-to-br from-[#f58529] via-[#dd2a7b] to-[#8134af]", text: "ig" },
+  twitter: { label: "Twitter", className: "bg-[#1D9BF0]", text: "x" },
+};
+
 export default function TeamMember(){
   const { id } = useParams();
   const m = team.find(t => String(t.id) === id) || team[0];
@@ -12,7 +18,7 @@ export default function TeamMember(){
     <section className="container-max py-12">
       <div className="grid md:grid-cols-2 gap-8 items-start card p-6 bg-white">
         <div className="flex items-center gap-6">
-          <img src={m.photo} alt={m.name} className="w-28 h-28 rounded-full object-cover shadow" />
+          <img src={m.photo} alt={m.name} className="w-28 h-28 rounded-full object-cover object-top shadow" />
           <div>
             <h1 className="text-3xl font-extrabold">{m.name}</h1>
             <div className="text-blue-600 font-semibold">{m.title.toUpperCase()}</div>
@@ -24,8 +30,28 @@ export default function TeamMember(){
           <div className="mt-4 pt-4 border-t">
             <div><span className="font-semibold">Email:</span> {m.email}</div>
             <div><span className="font-semibold">Role:</span> {m.title}</div>
-            <div><span className="font-semibold">Category:</span> {m.category}</div>
+            <div><span className="font-semibold">Residence:</span> {m.residence || "Nepal"}</div>
           </div>
+          {m.socials && (
+            <div className="mt-4 flex gap-3">
+              {Object.entries(m.socials).map(([platform, url]) => {
+                const meta = socialStyles[platform];
+                if (!meta || !url) return null;
+                return (
+                  <a
+                    key={platform}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-semibold uppercase text-white ${meta.className} hover:opacity-90 transition`}
+                    aria-label={`${m.name} on ${meta.label}`}
+                  >
+                    {meta.text}
+                  </a>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
 
@@ -42,10 +68,10 @@ export default function TeamMember(){
           </button>
         ))}
       </div>
-      <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
+      <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 max-w-5xl mx-auto">
         {filteredTeam.map(member => (
           <Link key={member.id} to={`/team/${member.id}`} className="card p-4 flex flex-col items-center">
-            <img src={member.photo} className="w-24 h-24 rounded-full object-cover" />
+            <img src={member.photo} className="w-24 h-24 rounded-full object-cover object-top" />
             <div className="mt-2 font-semibold">{member.name}</div>
             <div className="text-xs text-gray-600">{member.title}</div>
           </Link>
