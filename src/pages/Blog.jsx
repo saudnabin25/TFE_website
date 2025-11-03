@@ -7,13 +7,17 @@ export default function Blog(){
       <div className="grid gap-12 lg:grid-cols-[2fr,1fr]">
         <div className="grid gap-8 md:grid-cols-2">
           {posts.map(post => (
-            <article key={post.id} className="bg-white rounded-3xl shadow-md border overflow-hidden">
-              <div
-                className="h-32 flex items-center justify-center text-white text-lg font-semibold tracking-wide uppercase"
-                style={{ backgroundColor: post.categoryColor || "#1F2544" }}
-              >
-                {post.category || "Feature"}
-              </div>
+            <article key={post.id} className="bg-white rounded-3xl shadow-md border overflow-hidden flex flex-col">
+              {post.image ? (
+                <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+              ) : (
+                <div
+                  className="h-32 flex items-center justify-center text-white text-lg font-semibold tracking-wide uppercase"
+                  style={{ backgroundColor: post.categoryColor || "#1F2544" }}
+                >
+                  {post.category || "Feature"}
+                </div>
+              )}
               <div className="p-6 space-y-4">
                 <div className="text-xs uppercase tracking-wide text-gray-500">
                   {post.date}{post.readTime ? ` · ${post.readTime}` : ""}

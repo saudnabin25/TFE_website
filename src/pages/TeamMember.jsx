@@ -5,7 +5,7 @@ import team from "../data/team.js";
 const socialStyles = {
   facebook: { label: "Facebook", className: "bg-[#1877F2]", text: "f" },
   instagram: { label: "Instagram", className: "bg-gradient-to-br from-[#f58529] via-[#dd2a7b] to-[#8134af]", text: "ig" },
-  twitter: { label: "Twitter", className: "bg-[#1D9BF0]", text: "x" },
+  linkedin: { label: "LinkedIn", className: "bg-[#0A66C2]", text: "in" },
 };
 
 export default function TeamMember(){
@@ -16,13 +16,11 @@ export default function TeamMember(){
 
   return (
     <section className="container-max py-12">
-      <div className="grid md:grid-cols-2 gap-8 items-start card p-6 bg-white">
-        <div className="flex items-center gap-6">
-          <img src={m.photo} alt={m.name} className="w-28 h-28 rounded-full object-cover object-top shadow" />
-          <div>
-            <h1 className="text-3xl font-extrabold">{m.name}</h1>
-            <div className="text-blue-600 font-semibold">{m.title.toUpperCase()}</div>
-          </div>
+      <div className="grid md:grid-cols-[auto,1fr] gap-8 items-start card p-6 bg-white">
+        <div className="w-full md:max-w-sm flex flex-col items-center md:items-start">
+          <img src={m.photo} alt={m.name} className="w-full aspect-square rounded-3xl object-cover object-top shadow" />
+          <h1 className="mt-6 text-3xl font-extrabold text-center md:text-left">{m.name}</h1>
+          <div className="text-blue-600 font-semibold uppercase tracking-wide text-sm text-center md:text-left">{m.title}</div>
         </div>
         <div>
           <h2 className="text-xl font-bold">About {m.name.split(' ')[0]}</h2>

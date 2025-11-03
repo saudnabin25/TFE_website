@@ -8,10 +8,12 @@ import Students from "./pages/Students.jsx";
 import Student from "./pages/Student.jsx";
 import TeamMember from "./pages/TeamMember.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 export default function App(){
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">
         <Routes>
