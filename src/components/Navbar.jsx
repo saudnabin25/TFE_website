@@ -12,7 +12,7 @@ const links = [
 
 export default function Navbar(){
   return (
-    <header className="sticky top-0 z-50 bg-brand text-white">
+    <header className="sticky top-0 z-50 bg-[#2b2c72] text-white">
       <div className="container-max py-3 flex items-center justify-between">
         <Link to="/" className="font-extrabold text-lg">Logo</Link>
         <nav className="hidden md:flex gap-6">

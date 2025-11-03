@@ -2,21 +2,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 import team from "../data/team.js";
 
-const filters = ["All","Marketing Team","CTO","Business Analytics","Product Development"];
+const filters = ["All","Executive","Researchers","Advisors","Volunteers","Mentors"];
 
 export default function TeamSection(){
+  const [activeFilter, setActiveFilter] = React.useState("All");
+  const filteredTeam = activeFilter === "All" ? team : team.filter(member => member.category === activeFilter);
+
   return (
     <section className="container-max py-16" id="team">
       <h2 className="section-title text-center">Meet Our Team</h2>
 
       <div className="flex flex-wrap justify-center gap-3 mt-6">
         {filters.map(f => (
-          <button key={f} className={`px-4 py-2 rounded-full border bg-white text-sm hover:bg-gray-100`}>{f}</button>
+          <button
+            key={f}
+            className={`px-4 py-2 rounded-full border text-sm ${activeFilter === f ? "bg-brand text-white border-brand" : "bg-white hover:bg-gray-100"}`}
+            onClick={() => setActiveFilter(f)}
+            type="button"
+          >
+            {f}
+          </button>
         ))}
       </div>
 
       <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {team.slice(0,4).map(m => (
+        {filteredTeam.map(m => (
           <Link key={m.id} to={`/team/${m.id}`} className="card p-4 flex flex-col items-center hover:shadow-lg">
             <img src={m.photo} alt={m.name} className="w-28 h-28 rounded-full object-cover shadow-md" />
             <div className="mt-3 font-semibold">{m.name}</div>

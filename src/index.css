@@ -11,3 +11,4 @@ html, body, #root { height: 100%; }
 .btn-secondary { @apply btn border hover:bg-gray-100; }
 .section-title { @apply text-3xl sm:text-4xl font-extrabold text-gray-900; }
 .section-sub { @apply uppercase tracking-widest text-gray-500 text-xs; }
+.btn-hero { @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-white bg-blue-600 hover:bg-blue-700 transition; }

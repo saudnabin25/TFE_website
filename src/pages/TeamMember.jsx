@@ -5,6 +5,8 @@ import team from "../data/team.js";
 export default function TeamMember(){
   const { id } = useParams();
   const m = team.find(t => String(t.id) === id) || team[0];
+  const [activeFilter, setActiveFilter] = React.useState("All");
+  const filteredTeam = activeFilter === "All" ? team : team.filter(member => member.category === activeFilter);
 
   return (
     <section className="container-max py-12">
@@ -29,12 +31,19 @@ export default function TeamMember(){
 
       <h3 className="section-title text-center mt-12">Meet The Team</h3>
       <div className="flex flex-wrap justify-center gap-3 mt-6">
-        {["All","Marketing Team","CTO","Business Analytics","Product Development"].map(f => (
-          <button key={f} className="px-4 py-2 rounded-full border">{f}</button>
+        {["All","Executive","Researchers","Advisors","Volunteers","Mentors"].map(f => (
+          <button
+            key={f}
+            className={`px-4 py-2 rounded-full border ${activeFilter === f ? "bg-brand text-white border-brand" : "bg-white hover:bg-gray-100"}`}
+            onClick={() => setActiveFilter(f)}
+            type="button"
+          >
+            {f}
+          </button>
         ))}
       </div>
       <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {team.map(member => (
+        {filteredTeam.map(member => (
           <Link key={member.id} to={`/team/${member.id}`} className="card p-4 flex flex-col items-center">
             <img src={member.photo} className="w-24 h-24 rounded-full object-cover" />
             <div className="mt-2 font-semibold">{member.name}</div>
