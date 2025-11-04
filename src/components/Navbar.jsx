@@ -15,7 +15,7 @@ export default function Navbar(){
     <header className="sticky top-0 z-50 bg-white text-brand shadow-md">
       <div className="w-full px-5 md:px-10 py-4 flex items-center gap-6">
         <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-          <img src="/logo.png" alt="Trinket For Education logo" className="h-16 w-auto" />
+          <img src="/Pictures/logo.png" alt="Trinket For Education logo" className="h-16 w-auto" />
         </Link>
         <nav className="hidden md:flex gap-10 text-lg flex-1 justify-center">
           {links.map(link => {

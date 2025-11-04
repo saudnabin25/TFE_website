@@ -5,7 +5,7 @@ const team = [
     title: "President, Co-Founder",
     email: "nabin@trinketforeducation.org",
     category: "Executive",
-    photo: "/nabin.png",
+    photo: "/Pictures/nabin.png",
     about: "Nabin Saud is a Computer Science student at the University of South Florida. He works on designing a student-centric curriculum by integrating technology into education. He collaborates with other organizations and policymakers to bring those curricula into classrooms. Nabin believes education is every human’s basic right and is committed to lowering the illiteracy rate in Nepal.",
     socials: {
       facebook: "https://www.facebook.com/nabin.saud.711797",
@@ -77,9 +77,9 @@ const team = [
   {
     id: 6,
     name: "Binod Gurung",
-    title: "Advisor",
+    title: "Review Committee Member",
     email: "binod@trinketforeducation.org",
-    category: "Advisors",
+    category: "Review Committee",
     photo: "https://picsum.photos/id/1020/200/200",
     about: "Brings decades of nonprofit leadership experience, advising on governance and strategic partnerships.",
     socials: {
@@ -95,7 +95,7 @@ const team = [
     title: "Advisor",
     email: "neeraj@trinketforeducation.org",
     category: "Advisors",
-    photo: "/neeraj.jpeg",
+    photo: "/Pictures/neeraj.jpeg",
     about: "Neeraj is a biomedical engineer working in pharmaceutical manufacturing, specializing in process validation, quality systems, and regulatory compliance. He volunteers with Soch ko Udaan and Engineers Without Borders to support community projects in Nepal and the U.S. Believing education is the foundation for societal change, he is honored to advise Trinket For Education’s mission.",
     socials: {
       facebook: "https://www.facebook.com/neeraj.mishra.427061/",
@@ -107,7 +107,7 @@ const team = [
   {
     id: 8,
     name: "Tilak Bhatta",
-    title: "Advisor",
+    title: "Advisor, Co-Founder",
     email: "tilak@trinketforeducation.org",
     category: "Advisors",
     photo: "https://picsum.photos/id/1021/200/200",
@@ -132,6 +132,17 @@ const team = [
     },
     residence: "Kathmandu, Nepal",
     phone: "9851193520"
+  },
+  {
+    id: 10,
+    name: "Sarada Dhakal",
+    title: "Review Committee Member",
+    email: "sarada@trinketforeducation.org",
+    category: "Review Committee",
+    photo: "https://picsum.photos/seed/saradadhakal/200/200",
+    about: "Sarada Dhakal brings years of experience mentoring teachers and reviewing curriculum pilots across Nepal. She helps TFE evaluate programs, track field feedback, and ensure research-backed recommendations reach classrooms.",
+    socials: {},
+    residence: "Kathmandu, Nepal"
   }
 ];
 

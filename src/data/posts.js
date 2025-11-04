@@ -8,7 +8,7 @@ const posts = [
     category: "Education Reform",
     categoryColor: "#1F2544",
     author: "Aasutosh Bhatt",
-    image: "/blog1.jpg",
+    image: "/Pictures/blog1.jpg",
     content: [
       "In 1853, 220 years of isolation policy of the Tokugawa Shogunate trembled to the core, and Japan was forced to open its country—an incident remembered in Japanese history as the “Arrival of the Black Ships.” The nation was threatened with signing humiliating treaties by the gunboats of Commodore Perry docked in Tokyo Harbor.",
       "Almost 50 years earlier, in 1816, Nepal signed an even more humiliating treaty with the East India Company to put an end to the Anglo-Nepal War. The treaty involved Nepal giving up almost two-thirds of her land and accepting the permanent presence of a British resident in Kathmandu.",
@@ -25,7 +25,7 @@ const posts = [
     excerpt: "A comparative look at the reforms, investments, and community movements that brought classrooms into the twentieth century.",
     category: "Comparative Studies",
     categoryColor: "#E35D4A",
-    image: "/blog2.jpg",
+    image: "/Pictures/blog2.jpg",
     author: "Aasutosh Bhatt"
   },
   {
@@ -36,7 +36,7 @@ const posts = [
     excerpt: "How apprenticeship models and community-led learning continue to shape opportunity beyond the traditional school system.",
     category: "Alternative Learning",
     categoryColor: "#36A269",
-    image: "/blog3.png",
+    image: "/Pictures/blog3.png",
     author: "Aasutosh Bhatt"
   }
 ];

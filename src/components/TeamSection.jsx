@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import team from "../data/team.js";
 
-const filters = ["All","Executive","Researchers","Advisors","Volunteers","Mentors"];
+const filters = ["All","Executive","Researchers","Advisors","Volunteers","Mentors","Review Committee"];
 
 export default function TeamSection(){
   const [activeFilter, setActiveFilter] = React.useState("All");

@@ -55,7 +55,7 @@ export default function TeamMember(){
 
       <h3 className="section-title text-center mt-12">Meet The Team</h3>
       <div className="flex flex-wrap justify-center gap-3 mt-6">
-        {["All","Executive","Researchers","Advisors","Volunteers","Mentors"].map(f => (
+        {["All","Executive","Researchers","Advisors","Volunteers","Mentors","Review Committee"].map(f => (
           <button
             key={f}
             className={`px-4 py-2 rounded-full border ${activeFilter === f ? "bg-brand text-white border-brand" : "bg-white hover:bg-gray-100"}`}
