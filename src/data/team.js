@@ -50,12 +50,12 @@ const team = [
     title: "Student Development Director",
     email: "sneha@trinketforeducation.org",
     category: "Mentors",
-    photo: "https://picsum.photos/id/1012/200/200",
-    about: "Designs mentorship, training, and support services that help students grow as leaders in their communities.",
+    photo: "/Pictures/sneha.jpeg",
+    about: "Sneha Lama is a cybersecurity analyst with strong interest in tech and education. She leads development and student engagement at TFE, helping projects in Nepal grow and support more students. She believes that guidance can truly change lives and values creating opportunities that make a real difference for communities.",
     socials: {
       facebook: "https://www.facebook.com/snehal1228",
-      instagram: "https://instagram.com/sneha.lama",
-      linkedin: "https://www.linkedin.com/in/sneha-lama/"
+      instagram: "https://www.instagram.com/typicaleoxx?igsh=MXZjNWxudDg2MHQ4cw%3D%3D&utm_source=qr",
+      linkedin: "https://www.linkedin.com/in/snehalama?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     residence: "Tampa, Florida"
   },
