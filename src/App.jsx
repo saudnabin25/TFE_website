@@ -3,12 +3,14 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
 import Blog from "./pages/Blog.jsx";
 import Students from "./pages/Students.jsx";
 import Student from "./pages/Student.jsx";
 import TeamMember from "./pages/TeamMember.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import BackToTop from "./components/BackToTop.jsx";
 
 export default function App(){
   return (
@@ -18,6 +20,7 @@ export default function App(){
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blog />} />
           <Route path="/students" element={<Students />} />
           <Route path="/students/:id" element={<Student />} />
@@ -26,6 +29,7 @@ export default function App(){
         </Routes>
       </main>
       <Footer />
+      <BackToTop />
     </div>
   )
 }
