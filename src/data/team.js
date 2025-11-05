@@ -61,16 +61,16 @@ const team = [
   },
   {
     id: 5,
-    name: "Aashish Sah",
+    name: "Ashish Sah",
     title: "Mentor",
     email: "aasish@trinketforeducation.org",
     category: "Mentors",
-    photo: "https://picsum.photos/id/1025/200/200",
+    photo: "/Pictures/ashish.jpeg",
     about: "Ashish is a senior civil engineering student at the University of South Florida, specializing in structural engineering. He works at a structural design firm focused on commercial building projects. Outside of academics and work, he enjoys reading, trading stocks, and traveling. Ashish also mentors students through Trinket for Education, supporting their academic growth and inspiring them to reach their potential.",
     socials: {
       facebook: "https://www.facebook.com/aashish.sah.90",
-      instagram: "https://instagram.com/aasish.sha",
-      linkedin: "https://www.linkedin.com/in/aashish-sah/"
+      instagram: "https://www.instagram.com/ashish_sah7/",
+      linkedin: "https://www.linkedin.com/in/ashish-sah-42501b236/"
     },
     residence: "Tampa, Florida"
   },
