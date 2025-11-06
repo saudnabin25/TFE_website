@@ -5,12 +5,15 @@ import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Blog from "./pages/Blog.jsx";
+import BlogPost from "./pages/BlogPost.jsx";
+import Scholarships from "./pages/Scholarships.jsx";
 import Students from "./pages/Students.jsx";
 import Student from "./pages/Student.jsx";
 import TeamMember from "./pages/TeamMember.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import BackToTop from "./components/BackToTop.jsx";
+import AnnualReports from "./pages/AnnualReports.jsx";
 
 export default function App(){
   return (
@@ -22,8 +25,11 @@ export default function App(){
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blog />} />
+          <Route path="/blogs/:id" element={<BlogPost />} />
+          <Route path="/scholarships" element={<Scholarships />} />
           <Route path="/students" element={<Students />} />
           <Route path="/students/:id" element={<Student />} />
+          <Route path="/annual-reports" element={<AnnualReports />} />
           <Route path="/team/:id" element={<TeamMember />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

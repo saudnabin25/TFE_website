@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import posts from "../data/posts.js";
 
 export default function Blog(){
@@ -22,8 +23,18 @@ export default function Blog(){
                 <div className="text-xs uppercase tracking-wide text-gray-500">
                   {post.date}{post.readTime ? ` · ${post.readTime}` : ""}
                 </div>
-                <h2 className="text-xl font-extrabold text-brand">{post.title}</h2>
+                <h2 className="text-xl font-extrabold text-brand">
+                  <Link to={`/blogs/${post.id}`} className="hover:text-[#2563eb] transition">
+                    {post.title}
+                  </Link>
+                </h2>
                 <p className="text-gray-600 text-sm leading-relaxed">{post.excerpt}</p>
+                <Link
+                  to={`/blogs/${post.id}`}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-[#2563eb] transition"
+                >
+                  Read More <span aria-hidden>→</span>
+                </Link>
                 <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                   <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-xs font-semibold text-gray-500">
                     {post.author ? post.author.split(" ").map(n => n[0]).join("").slice(0,2) : "TFE"}
@@ -47,7 +58,12 @@ export default function Blog(){
                   {post.category ? post.category.split(" ").map(w => w[0]).join("").slice(0,3) : "TFE"}
                 </span>
                 <div className="flex-1">
-                  <div className="text-sm font-semibold text-brand leading-snug">{post.title}</div>
+                  <Link
+                    to={`/blogs/${post.id}`}
+                    className="text-sm font-semibold text-brand leading-snug hover:text-[#2563eb] transition"
+                  >
+                    {post.title}
+                  </Link>
                   <div className="text-xs text-gray-500 mt-1">
                     {post.date}{post.readTime ? ` · ${post.readTime}` : ""}
                   </div>

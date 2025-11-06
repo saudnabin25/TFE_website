@@ -26,7 +26,12 @@ const posts = [
     category: "Comparative Studies",
     categoryColor: "#E35D4A",
     image: "/Pictures/blog2.jpg",
-    author: "Aasutosh Bhatt"
+    author: "Aasutosh Bhatt",
+    content: [
+      "Modern education in Nepal and Japan emerged from necessity. Japan’s Meiji Restoration propelled rapid modernization, with bold investments in schools, technical institutes, and teacher training. Meanwhile, Nepal’s journey was slower but equally determined, driven by community schools and returning scholars who sought to reform the system from within.",
+      "In both countries, access became the rallying cry. Japan centralized its education system; Nepal experimented with community-driven models. Today, Nepal continues to blend global ideas with local realities, while Japan refines its approach to keep students creative, adaptable, and globally competitive.",
+      "The two nations remind us that modern education is never finished—it is always a work in progress guided by cultural pride, economic ambition, and the hope that every child can contribute to the future."
+    ]
   },
   {
     id: 3,
@@ -37,7 +42,12 @@ const posts = [
     category: "Alternative Learning",
     categoryColor: "#36A269",
     image: "/Pictures/blog3.png",
-    author: "Aasutosh Bhatt"
+    author: "Aasutosh Bhatt",
+    content: [
+      "Not every learner thrives inside a traditional classroom. Across Nepal, informal learning networks—mentorship circles, apprenticeships, and community workshops—have become essential for students whose curiosity stretches beyond the textbook.",
+      "These models pair learners with artisans, entrepreneurs, and nonprofits who teach by doing. Skills in carpentry, coding, farming, and art are transferred alongside values of responsibility and problem-solving. It’s education rooted in the realities of home and community.",
+      "Alternative pathways complement formal schooling by honoring experience as a teacher. They provide lifelines for students who might otherwise leave school, giving them tools to create their own opportunities while staying anchored to their communities."
+    ]
   }
 ];
 export default posts;

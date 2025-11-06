@@ -1,7 +1,7 @@
 import React from "react";
 
 const socials = [
-  { label: "Facebook", symbol: "f", href: "#" },
+  { label: "Facebook", symbol: "f", href: "https://www.facebook.com/profile.php?id=61572664831960" },
   { label: "Instagram", symbol: "ig", href: "#" },
   { label: "LinkedIn", symbol: "in", href: "#" },
   { label: "X", symbol: "x", href: "#" },
@@ -16,7 +16,12 @@ const aboutLinks = [
   "Terms and Conditions",
 ];
 
-const articleLinks = ["Blogs", "Publications", "Events", "Careers"];
+const articleLinks = [
+  { label: "Blogs", href: "/blogs" },
+  { label: "Annual Reports", href: "/annual-reports" },
+  { label: "Publications", href: "#" },
+  { label: "Careers", href: "#" },
+];
 const teamLinks = ["Advisory Board", "Founders", "Researchers"];
 
 export default function Footer(){
@@ -37,6 +42,8 @@ export default function Footer(){
                   href={s.href}
                   aria-label={s.label}
                   className="w-9 h-9 border border-gray-300 rounded-full flex items-center justify-center text-xs font-semibold uppercase text-gray-600 hover:text-brand hover:border-brand transition"
+                  target={s.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={s.href?.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
                   {s.symbol}
                 </a>
@@ -72,8 +79,15 @@ export default function Footer(){
             <h4 className="font-semibold text-gray-900">Articles</h4>
             <ul className="mt-4 space-y-2">
               {articleLinks.map(item => (
-                <li key={item}>
-                  <a href="#" className="hover:text-brand transition">{item}</a>
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    className="hover:text-brand transition"
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  >
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>

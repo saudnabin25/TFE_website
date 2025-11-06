@@ -11,8 +11,10 @@ export default function ProjectCard({project}){
   return (
     <div className="card overflow-hidden h-full flex flex-col">
       {hasImage ? (
-        <div className="w-full aspect-[4/3] bg-gray-100">
-          <img src={project.banner} alt={project.title} className="w-full h-full object-cover" />
+        <div className="w-full aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <div className="w-full h-full rounded-2xl border border-brand/20 bg-white flex items-center justify-center overflow-hidden">
+            <img src={project.banner} alt={project.title} className="max-w-full max-h-full object-contain" />
+          </div>
         </div>
       ) : (
         <div className={`${topColor} text-white h-40 flex items-center justify-center text-lg font-semibold`}>
@@ -21,7 +23,7 @@ export default function ProjectCard({project}){
       )}
       <div className="p-6 flex flex-col flex-1">
         <div className="text-brand font-extrabold text-lg">{project.title}</div>
-        <p className="text-gray-600 mt-3 whitespace-pre-line leading-relaxed flex-1">{project.description}</p>
+        <p className="text-gray-600 text-sm mt-3 whitespace-pre-line leading-relaxed flex-1">{project.description}</p>
 
         <div className="mt-4">
           <div className="flex items-center justify-between text-sm font-semibold text-blue-700">

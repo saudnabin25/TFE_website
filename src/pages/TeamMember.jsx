@@ -18,7 +18,11 @@ export default function TeamMember(){
     <section className="container-max py-12">
       <div className="grid md:grid-cols-[auto,1fr] gap-8 items-start card p-6 bg-white">
         <div className="w-full md:max-w-sm flex flex-col items-center md:items-start">
-          <img src={m.photo} alt={m.name} className="w-full aspect-square rounded-3xl object-cover object-top shadow" />
+          <img
+            src={m.photo}
+            alt={m.name}
+            className={`w-full aspect-square rounded-3xl object-cover shadow ${m.photoClass || "object-top"}`}
+          />
           <h1 className="mt-6 text-3xl font-extrabold text-center md:text-left">{m.name}</h1>
           <div className="text-blue-600 font-semibold uppercase tracking-wide text-sm text-center md:text-left">{m.title}</div>
         </div>
@@ -69,7 +73,10 @@ export default function TeamMember(){
       <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 max-w-5xl mx-auto">
         {filteredTeam.map(member => (
           <Link key={member.id} to={`/team/${member.id}`} className="card p-4 flex flex-col items-center">
-            <img src={member.photo} className="w-24 h-24 rounded-full object-cover object-top" />
+            <img
+              src={member.photo}
+              className={`w-24 h-24 rounded-full object-cover ${member.photoClass || "object-top"}`}
+            />
             <div className="mt-2 font-semibold">{member.name}</div>
             <div className="text-xs text-gray-600">{member.title}</div>
           </Link>

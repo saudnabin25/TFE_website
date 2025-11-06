@@ -6,11 +6,10 @@ export default function ProjectsSection(){
   return (
     <section id="projects" className="container-max py-16">
       <div className="text-center">
-        <div className="section-sub">OUR PROJECTS</div>
-        <h2 className="section-title mt-2">Projects That Need Your Support</h2>
+        <h2 className="section-title mt-2">Projects We Are Working On</h2>
       </div>
 
-      <div className="grid gap-8 mt-10 sm:grid-cols-1 lg:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-6 mt-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto">
         {projects.map(p => <ProjectCard key={p.id} project={p} />)}
       </div>
 

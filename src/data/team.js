@@ -35,7 +35,8 @@ const team = [
     title: "Treasurer",
     email: "sushant@trinketforeducation.org",
     category: "Executive",
-    photo: "https://picsum.photos/id/1001/200/200",
+    photo: "/Pictures/sushant.JPG",
+    photoClass: "object-center",
     about: "Sushant Upreti is a senior pursuing Physics and Econometrics at the University of South Florida. He is passionate about giving back, organizing fundraising events on campus, and working with principals to find bright students to sponsor.",
     socials: {
       facebook: "https://www.facebook.com/susant.upreti.5",
@@ -47,7 +48,7 @@ const team = [
   {
     id: 4,
     name: "Sneha Lama",
-    title: "Student Development Director",
+    title: "Student Development Director, Mentor",
     email: "sneha@trinketforeducation.org",
     category: "Mentors",
     photo: "/Pictures/sneha.jpeg",
@@ -114,8 +115,8 @@ const team = [
     about: "Provides guidance on education policy, ensuring programs align with community and government priorities.",
     socials: {
       facebook: "https://www.facebook.com/t.r.bhatta.11",
-      instagram: "https://instagram.com/tilak.bhatta",
-      linkedin: "https://www.linkedin.com/in/tilak-bhatta/"
+      instagram: "https://www.instagram.com/tilak_raj.11?igsh=MWFyajQ2M2YxOTR3",
+      linkedin: "https://www.linkedin.com/in/tilakbhatta?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     residence: "Charlotte, North Carolina"
   },
@@ -143,6 +144,17 @@ const team = [
     about: "Sarada Dhakal brings years of experience mentoring teachers and reviewing curriculum pilots across Nepal. She helps TFE evaluate programs, track field feedback, and ensure research-backed recommendations reach classrooms.",
     socials: {},
     residence: "Kathmandu, Nepal"
+  },
+  {
+    id: 11,
+    name: "Suchi Saud",
+    title: "Volunteer",
+    email: "suchi@trinketforeducation.org",
+    category: "Volunteers",
+    photo: "https://picsum.photos/seed/suchi/200/200",
+    about: "Suchi Saud is a junior at Herndon High School in Virginia. She supports TFE outreach events, coordinates volunteer schedules, and helps younger students stay engaged with their studies.",
+    socials: {},
+    residence: "Herndon, Virginia"
   }
 ];
 

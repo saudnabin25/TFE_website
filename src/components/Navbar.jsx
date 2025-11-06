@@ -1,30 +1,69 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const links = [
   { label: "Projects", href: "#projects" },
   { label: "About Us", to: "/about" },
-  { label: "Events", href: "#events" },
   { label: "Students", to: "/students" },
   { label: "Blogs", to: "/blogs" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Scholarships", to: "/scholarships" },
+  { label: "Get Involved", href: "#contact" },
 ];
 
 export default function Navbar(){
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const [scrolled, setScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!isHome) {
+      setScrolled(true);
+      return undefined;
+    }
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 120);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHome]);
+
+  const onHero = isHome && !scrolled;
+
+  const headerClass = [
+    "w-full z-50 transition-all duration-200",
+    onHero ? "absolute top-0 left-0 text-white bg-transparent shadow-none" : "sticky top-0 bg-white text-brand shadow-md",
+  ].join(" ");
+
+  const linkClass = onHero
+    ? "inline-flex items-center font-semibold text-white hover:text-white/70 transition"
+    : "inline-flex items-center font-semibold text-brand hover:text-[#2563eb] transition";
+
   return (
-    <header className="sticky top-0 w-full z-50 bg-white text-brand shadow-md">
-      <div className="px-5 md:px-10 py-5 flex items-center gap-6">
+    <header className={headerClass}>
+      <div className="px-5 md:px-10 py-3 flex items-center gap-6">
         <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-          <img src="/Pictures/logo.png" alt="Trinket For Education logo" className="h-16 w-auto" />
+          <img
+            src="/Pictures/logo.png"
+            alt="Trinket For Education logo"
+            className={`w-auto ${
+              onHero
+                ? "h-14 drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]"
+                : "h-14"
+            }`}
+          />
         </Link>
-        <nav className="hidden md:flex gap-8 text-lg flex-1 justify-center">
+        <nav className="hidden md:flex gap-7 text-base flex-1 justify-center">
           {links.map(link => {
             if (link.to) {
               return (
                 <Link
                   key={link.label}
                   to={link.to}
-                  className="inline-flex items-center font-semibold text-brand hover:text-[#2563eb] transition"
+                  className={linkClass}
                 >
                   {link.label}
                 </Link>
@@ -34,7 +73,7 @@ export default function Navbar(){
               <a
                 key={link.label}
                 href={link.href}
-                className="inline-flex items-center font-semibold text-brand hover:text-[#2563eb] transition"
+                className={linkClass}
               >
                 {link.label}
               </a>
@@ -43,7 +82,7 @@ export default function Navbar(){
         </nav>
         <Link
           to="/"
-          className="ml-auto btn btn-blue font-bold text-base px-5 py-2.5 rounded-full"
+          className={`ml-auto btn btn-blue font-bold text-base px-5 py-1.5 rounded-full ${onHero ? "shadow-lg" : ""}`}
         >
           Donate Us
         </Link>

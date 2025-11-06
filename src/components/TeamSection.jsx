@@ -28,7 +28,11 @@ export default function TeamSection(){
       <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6 max-w-5xl mx-auto">
         {filteredTeam.map(m => (
           <Link key={m.id} to={`/team/${m.id}`} className="card p-4 flex flex-col items-center hover:shadow-lg">
-            <img src={m.photo} alt={m.name} className="w-28 h-28 rounded-full object-cover object-top shadow-md" />
+            <img
+              src={m.photo}
+              alt={m.name}
+              className={`w-28 h-28 rounded-full object-cover shadow-md ${m.photoClass || "object-top"}`}
+            />
             <div className="mt-3 font-semibold">{m.name}</div>
             <div className="text-xs text-gray-600">{m.title}</div>
           </Link>
