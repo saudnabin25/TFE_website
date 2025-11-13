@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import BackToTop from "./components/BackToTop.jsx";
 import AnnualReports from "./pages/AnnualReports.jsx";
+import GetInvolved from "./pages/GetInvolved.jsx";
 
 export default function App(){
   return (
@@ -30,6 +31,7 @@ export default function App(){
           <Route path="/students" element={<Students />} />
           <Route path="/students/:id" element={<Student />} />
           <Route path="/annual-reports" element={<AnnualReports />} />
+          <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/team/:id" element={<TeamMember />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

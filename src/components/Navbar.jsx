@@ -7,7 +7,7 @@ const links = [
   { label: "Students", to: "/students" },
   { label: "Blogs", to: "/blogs" },
   { label: "Scholarships", to: "/scholarships" },
-  { label: "Get Involved", href: "#contact" },
+  { label: "Get Involved", to: "/get-involved" },
 ];
 
 export default function Navbar(){
