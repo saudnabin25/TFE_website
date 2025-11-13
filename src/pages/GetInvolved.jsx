@@ -50,14 +50,8 @@ export default function GetInvolved(){
 
   return (
     <>
-      <section className="relative isolate overflow-hidden py-24 text-white">
-        <img
-          src="/Pictures/get-involved.jpeg"
-          alt="Volunteers encouraging students to get involved"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-brand/80"></div>
-        <div className="container-max relative text-center max-w-3xl">
+      <section className="bg-brand text-white py-24">
+        <div className="container-max text-center max-w-3xl">
           <p className="uppercase tracking-[0.3em] text-xs font-semibold text-white/70">Get Involved</p>
           <h1 className="text-4xl font-bold mt-4">Be the spark that unlocks learning</h1>
           <p className="mt-4 text-white/80">
