@@ -6,7 +6,7 @@ const team = [
     email: "nabin@trinketforeducation.org",
     category: "Executive",
     photo: "/Pictures/nabin.png",
-    about: "Nabin Saud is a Computer Science student at the University of South Florida. He works on designing a student-centric curriculum by integrating technology into education. He collaborates with other organizations and policymakers to bring those curricula into classrooms. Nabin believes education is every human’s basic right and is committed to lowering the illiteracy rate in Nepal.",
+    about: "Hi there, I’m Nabin Saud — born and raised in Nepal, and I moved to the United States at the age of 15. I studied until 9th grade in Nepal and continued my high school in Herndon, Virginia. My passion for technology inspired me to study Computer Science — a foundation that continues to shape everything I do today.\n\n\nI’ve always loved the idea of learning — discovering new things and growing every day. But as I got older, school stopped feeling as exciting, and I couldn’t help but wonder what went wrong. That question led me and Aasutosh to start Trinket for Education (TFE), a nonprofit dedicated to making learning fun and meaningful again. Check out our projects to see how we’re turning that vision into reality.\n\n\nWe also believe education is a basic right, so with the help of our donors, we sponsor bright students who face financial challenges, ensuring no child is held back by their circumstances.",
     socials: {
       facebook: "https://www.facebook.com/nabin.saud.711797",
       instagram: "https://instagram.com/nabin.saud",
@@ -20,8 +20,8 @@ const team = [
     title: "Secretary, Co-Founder",
     email: "aasutosh@trinketforeducation.org",
     category: "Executive",
-    photo: "https://picsum.photos/id/1011/200/200",
-    about: "Aasutosh Bhatt is a civil engineer and University of Texas at Arlington alumnus. He is securing merit and potential-based scholarships for children in Nepal and building a system that tracks student progress, interests, and aspirations.",
+    photo: "/Pictures/Aasutosh.JPG",
+    about: "Aasutosh Bhatt is a civil engineer and University of Texas at Arlington alumni. As a civil engineer, he works with cities across Texas to make sure they get clean and safe drinking water.\n\nHe brings that same systems-focused mindset into his education work with TFE.\n\nAs a founder of TFE, Aasutosh believes that a fundamental change to how we teach and train our children is the key that will unlock Nepal’s potential. He is working on building an educational framework which will enable this vision to come to fruition. Working with schools and researchers across Nepal, he has been contributing to the larger TFE vision.",
     socials: {
       facebook: "https://www.facebook.com/ashutosh.bhatt.31",
       instagram: "https://instagram.com/aasutosh.bhatt",
@@ -97,7 +97,7 @@ const team = [
     email: "neeraj@trinketforeducation.org",
     category: "Advisors",
     photo: "/Pictures/neeraj.jpeg",
-    about: "Neeraj is a biomedical engineer working in pharmaceutical manufacturing, specializing in process validation, quality systems, and regulatory compliance. He volunteers with Soch ko Udaan and Engineers Without Borders to support community projects in Nepal and the U.S. Believing education is the foundation for societal change, he is honored to advise Trinket For Education’s mission.",
+    about: "I am a biomedical engineer working in pharmaceutical manufacturing, specializing in process validation, quality systems, and regulatory compliance.\n\n\nBeyond my professional work, I’ve been deeply involved with nonprofits such as Soch ko Udaan and Engineers Without Borders, where I contribute to community outreach projects and awareness campaigns in Nepal and the U.S.\n\n\nEducation has always been at the heart of my pursuits; it’s the foundation that empowers individuals and transforms societies. I believe in Trinket for Education’s mission to strengthen the changing landscape of education in Nepal and am honored to support their vision as an advisor.",
     socials: {
       facebook: "https://www.facebook.com/neeraj.mishra.427061/",
       instagram: "https://www.instagram.com/neeraj_mishra__?igsh=MTdjdGpjM283a3EyeQ%3D%3D&utm_source=qr",
@@ -111,14 +111,14 @@ const team = [
     title: "Advisor, Co-Founder",
     email: "tilak@trinketforeducation.org",
     category: "Advisors",
-    photo: "https://picsum.photos/id/1021/200/200",
-    about: "Provides guidance on education policy, ensuring programs align with community and government priorities.",
+    photo: "/Pictures/Tilak.jpeg",
+    about: "Tilak is an asset manager working in renewable energy production. He oversees the investment, performance, and optimization of solar and battery storage sites. He is proud to have supported TFE in its impactful mission and is excited to contribute more to project \"Sanskriti,\" where TFE plans to integrate culture with curriculum.",
     socials: {
       facebook: "https://www.facebook.com/t.r.bhatta.11",
       instagram: "https://www.instagram.com/tilak_raj.11?igsh=MWFyajQ2M2YxOTR3",
       linkedin: "https://www.linkedin.com/in/tilakbhatta?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
-    residence: "Charlotte, North Carolina"
+    residence: "Morrisville, North Carolina"
   },
   {
     id: 9,
@@ -151,10 +151,22 @@ const team = [
     title: "Volunteer",
     email: "suchi@trinketforeducation.org",
     category: "Volunteers",
-    photo: "https://picsum.photos/seed/suchi/200/200",
+    photo: "/Pictures/Suchi.JPG",
+    photoClass: "object-center",
     about: "Suchi Saud is a junior at Herndon High School in Virginia. She supports TFE outreach events, coordinates volunteer schedules, and helps younger students stay engaged with their studies.",
     socials: {},
     residence: "Herndon, Virginia"
+  },
+  {
+    id: 12,
+    name: "Aditi Bastola",
+    title: "Mentor",
+    email: "aditi@trinketforeducation.org",
+    category: "Mentors",
+    photo: "/Pictures/aditi.jpeg",
+    about: "Aditi mentors TFE scholars by blending her background in community organizing with a deep commitment to hands-on learning. She helps each student design projects that tie curiosity to real-world impact and makes sure their support plans keep families involved every step of the way.",
+    socials: {},
+    residence: "Kathmandu, Nepal"
   }
 ];
 
