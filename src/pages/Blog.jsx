@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import posts from "../data/posts.js";
+import { assetPath } from "../utils/assetPath.js";
+
+const authorImages = {
+  "Aasutosh Bhatt": assetPath("Pictures/Aasutosh.JPG")
+};
 
 export default function Blog(){
   return (
@@ -36,9 +41,17 @@ export default function Blog(){
                   Read More <span aria-hidden>→</span>
                 </Link>
                 <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-xs font-semibold text-gray-500">
-                    {post.author ? post.author.split(" ").map(n => n[0]).join("").slice(0,2) : "TFE"}
-                  </div>
+                  {post.author && authorImages[post.author] ? (
+                    <img
+                      src={authorImages[post.author]}
+                      alt={post.author}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-xs font-semibold text-gray-500">
+                      {post.author ? post.author.split(" ").map(n => n[0]).join("").slice(0,2) : "TFE"}
+                    </div>
+                  )}
                   <div className="text-sm font-medium text-gray-700">{post.author || "Trinket For Education"}</div>
                 </div>
               </div>
@@ -51,12 +64,20 @@ export default function Blog(){
           <ul className="mt-6 space-y-4">
             {posts.slice(0,5).map(post => (
               <li key={`recent-${post.id}`} className="flex gap-4">
-                <span
-                  className="mt-1 inline-flex h-10 w-10 rounded-xl text-[10px] font-semibold uppercase text-white items-center justify-center"
-                  style={{ backgroundColor: post.categoryColor || "#1F2544" }}
-                >
-                  {post.category ? post.category.split(" ").map(w => w[0]).join("").slice(0,3) : "TFE"}
-                </span>
+                {post.image ? (
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="mt-1 h-10 w-10 rounded-xl object-cover shadow-sm"
+                  />
+                ) : (
+                  <span
+                    className="mt-1 inline-flex h-10 w-10 rounded-xl text-[10px] font-semibold uppercase text-white items-center justify-center"
+                    style={{ backgroundColor: post.categoryColor || "#1F2544" }}
+                  >
+                    {post.category ? post.category.split(" ").map(w => w[0]).join("").slice(0,3) : "TFE"}
+                  </span>
+                )}
                 <div className="flex-1">
                   <Link
                     to={`/blogs/${post.id}`}

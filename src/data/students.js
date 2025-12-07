@@ -1,4 +1,6 @@
-const students = [
+import { assetPath } from "../utils/assetPath.js";
+
+const rawStudents = [
   {
     id: 1,
     name: "Aasish BK",
@@ -139,6 +141,21 @@ const students = [
     grade: "Grade 9",
     location: "Bajhang, Nepal",
   },
+  {
+    id: 15,
+    name: "Lokesh Bhatta",
+    focus: "Business & Design",
+    description:
+      "Lokesh sketches storefront layouts for the small shops in his village and wants to study entrepreneurship so he can help families design businesses that feel welcoming and modern.",
+    photo: "https://picsum.photos/seed/lokeshbhatta/200/200",
+    grade: "Grade 11",
+    location: "Darchula, Nepal",
+  },
 ];
+
+const students = rawStudents.map(student => ({
+  ...student,
+  photo: student.photo?.startsWith("http") ? student.photo : assetPath(student.photo),
+}));
 
 export default students;

@@ -1,5 +1,7 @@
 
-const team = [
+import { assetPath } from "../utils/assetPath.js";
+
+const rawTeam = [
   {
     id: 1,
     name: "Nabin Saud",
@@ -174,5 +176,10 @@ const team = [
     residence: "Kathmandu, Nepal"
   }
 ];
+
+const team = rawTeam.map(member => ({
+  ...member,
+  photo: member.photo?.startsWith("http") ? member.photo : assetPath(member.photo),
+}));
 
 export default team;

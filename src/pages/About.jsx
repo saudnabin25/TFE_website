@@ -1,4 +1,5 @@
 import React from "react";
+import { assetPath } from "../utils/assetPath.js";
 import AboutSection from "../components/AboutSection.jsx";
 import TeamSection from "../components/TeamSection.jsx";
 
@@ -9,8 +10,8 @@ export default function About(){
       <section className="container-max py-16">
         <div className="max-w-5xl mx-auto grid gap-10 md:grid-cols-[minmax(0,1fr),minmax(0,1.4fr)] items-center">
           <div className="w-full">
-            <img
-              src="/Pictures/founders.jpg"
+              <img
+                src={assetPath("Pictures/founders.jpg")}
               alt="Founders of Trinket For Education"
               className="w-full rounded-3xl object-cover shadow-lg"
             />
