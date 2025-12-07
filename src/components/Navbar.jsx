@@ -1,9 +1,10 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { DONATION_URL } from "../constants/links.js";
 
 const links = [
-  { label: "Projects", href: "#projects" },
   { label: "About Us", to: "/about" },
+  { label: "Projects", href: "#projects" },
   { label: "Students", to: "/students" },
   { label: "Blogs", to: "/blogs" },
   { label: "Scholarships", to: "/scholarships" },
@@ -12,6 +13,7 @@ const links = [
 
 export default function Navbar(){
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === "/";
   const [scrolled, setScrolled] = React.useState(false);
 
@@ -32,6 +34,17 @@ export default function Navbar(){
   }, [isHome]);
 
   const onHero = isHome && !scrolled;
+  const handleProjectsClick = event => {
+    event.preventDefault();
+    if (isHome) {
+      const section = document.getElementById("projects");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate("/", { state: { scrollTo: "projects" } });
+    }
+  };
 
   const headerClass = [
     "w-full z-50 transition-all duration-200",
@@ -69,6 +82,18 @@ export default function Navbar(){
                 </Link>
               );
             }
+            if (link.href === "#projects") {
+              return (
+                <button
+                  key={link.label}
+                  type="button"
+                  onClick={handleProjectsClick}
+                  className={linkClass}
+                >
+                  {link.label}
+                </button>
+              );
+            }
             return (
               <a
                 key={link.label}
@@ -80,12 +105,16 @@ export default function Navbar(){
             );
           })}
         </nav>
-        <Link
-          to="/"
-          className={`ml-auto btn btn-blue font-bold text-base px-5 py-1.5 rounded-full ${onHero ? "shadow-lg" : ""}`}
+        <a
+          href={DONATION_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`ml-auto px-5 py-2 rounded-xl bg-brand text-white font-semibold text-base shadow-lg shadow-brand/40 hover:shadow-brand/60 transition ${
+            onHero ? "border border-white/40" : ""
+          }`}
         >
           Donate Us
-        </Link>
+        </a>
       </div>
     </header>
   )

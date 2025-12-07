@@ -13,6 +13,7 @@ export default function TeamMember(){
   const m = team.find(t => String(t.id) === id) || team[0];
   const [activeFilter, setActiveFilter] = React.useState("All");
   const filteredTeam = activeFilter === "All" ? team : team.filter(member => member.category === activeFilter);
+  const aboutParagraphs = (m.about || "").split("\n\n").filter(paragraph => paragraph.trim().length);
 
   return (
     <section className="container-max py-12">
@@ -28,7 +29,11 @@ export default function TeamMember(){
         </div>
         <div>
           <h2 className="text-xl font-bold">About {m.name.split(' ')[0]}</h2>
-          <p className="text-gray-700 mt-2">{m.about}</p>
+          <div className="text-gray-700 mt-2 space-y-4">
+            {aboutParagraphs.map((paragraph, idx) => (
+              <p key={`about-${idx}`} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
+            ))}
+          </div>
           <div className="mt-4 pt-4 border-t">
             <div><span className="font-semibold">Email:</span> {m.email}</div>
             <div><span className="font-semibold">Role:</span> {m.title}</div>

@@ -1,3 +1,4 @@
+
 const team = [
   {
     id: 1,
@@ -6,11 +7,11 @@ const team = [
     email: "nabin@trinketforeducation.org",
     category: "Executive",
     photo: "/Pictures/nabin.png",
-    about: "Nabin Saud is a Computer Science student at the University of South Florida. He works on designing a student-centric curriculum by integrating technology into education. He collaborates with other organizations and policymakers to bring those curricula into classrooms. Nabin believes education is every human’s basic right and is committed to lowering the illiteracy rate in Nepal.",
+    about: "Hi there, I’m Nabin Saud — born and raised in Nepal, and I moved to the United States at the age of 15. I studied until 9th grade in Nepal and continued my high school in Herndon, Virginia. My passion for technology inspired me to study Computer Science — a foundation that continues to shape everything I do today.\n\n\nI’ve always loved the idea of learning — discovering new things and growing every day. But as I got older, school stopped feeling as exciting, and I couldn’t help but wonder what went wrong. That question led me and Aasutosh to start Trinket for Education (TFE), a nonprofit dedicated to making learning fun and meaningful again. Check out our projects to see how we’re turning that vision into reality.\n\n\nWe also believe education is a basic right, so with the help of our donors, we sponsor bright students who face financial challenges, ensuring no child is held back by their circumstances.",
     socials: {
       facebook: "https://www.facebook.com/nabin.saud.711797",
       instagram: "https://instagram.com/nabin.saud",
-      linkedin: "https://www.linkedin.com/in/nabin-saud/"
+      linkedin: "https://www.linkedin.com/in/nabin-saud-426bab158?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     residence: "Tampa, Florida"
   },
@@ -20,12 +21,12 @@ const team = [
     title: "Secretary, Co-Founder",
     email: "aasutosh@trinketforeducation.org",
     category: "Executive",
-    photo: "https://picsum.photos/id/1011/200/200",
-    about: "Aasutosh Bhatt is a civil engineer and University of Texas at Arlington alumnus. He is securing merit and potential-based scholarships for children in Nepal and building a system that tracks student progress, interests, and aspirations.",
+    photo: "/Pictures/Aasutosh.JPG",
+    about: "Aasutosh Bhatt is a civil engineer and University of Texas at Arlington alumni. As a civil engineer, he works with cities across Texas to make sure they get clean and safe drinking water.\n\nHe brings that same systems-focused mindset into his education work with TFE.\n\nAs a founder of TFE, Aasutosh believes that a fundamental change to how we teach and train our children is the key that will unlock Nepal’s potential. He is working on building an educational framework which will enable this vision to come to fruition. Working with schools and researchers across Nepal, he has been contributing to the larger TFE vision.",
     socials: {
       facebook: "https://www.facebook.com/ashutosh.bhatt.31",
       instagram: "https://instagram.com/aasutosh.bhatt",
-      linkedin: "https://www.linkedin.com/in/aasutosh-bhatt/"
+      linkedin: "https://www.linkedin.com/in/aashutosh-bhatt-15b0b9260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     residence: "Dallas, Texas"
   },
@@ -41,7 +42,7 @@ const team = [
     socials: {
       facebook: "https://www.facebook.com/susant.upreti.5",
       instagram: "https://instagram.com/sushant.upreti",
-      linkedin: "https://www.linkedin.com/in/sushant-upreti/"
+      linkedin: "https://www.linkedin.com/in/sushant-upreti-869024208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     residence: "Tampa, Florida"
   },
@@ -77,6 +78,51 @@ const team = [
   },
   {
     id: 6,
+    name: "Aditi Chapagain",
+    title: "Mentor",
+    email: "aditi@trinketforeducation.org",
+    category: "Mentors",
+    photo: "/Pictures/Aditi.jpeg",
+    about: "Aditi Chapagain is a sophomore Computer Science student at University of South. She believes that education is the foundation of growth and is passionate about supporting students through mentorship. Through her involvement with TFE, she hopes to empower individual students while contributing to broader improvements in education, one step at a time.",
+    socials: {
+      facebook: "https://www.facebook.com/share/1DZXKXTXFs/",
+      instagram: "https://www.instagram.com/adite_chapagain2?igsh=N2JieWR0aWZqdTI=",
+      linkedin: "https://www.linkedin.com/in/aditi-chapagain-23132727b/"
+    },
+    residence: "South Florida"
+  },
+  {
+    id: 7,
+    name: "Tilak Bhatta",
+    title: "Advisor, Co-Founder",
+    email: "tilak@trinketforeducation.org",
+    category: "Advisors",
+    photo: "/Pictures/Tilak.jpeg",
+    about: "Tilak is an asset manager working in renewable energy production. He oversees the investment, performance, and optimization of solar and battery storage sites. He is proud to have supported TFE in its impactful mission and is excited to contribute more to project \"Sanskriti,\" where TFE plans to integrate culture with curriculum.",
+    socials: {
+      facebook: "https://www.facebook.com/t.r.bhatta.11",
+      instagram: "https://www.instagram.com/tilak_raj.11?igsh=MWFyajQ2M2YxOTR3",
+      linkedin: "https://www.linkedin.com/in/tilakbhatta?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    residence: "Morrisville, North Carolina"
+  },
+  {
+    id: 8,
+    name: "Neeraj Mishra",
+    title: "Advisor",
+    email: "neeraj@trinketforeducation.org",
+    category: "Advisors",
+    photo: "/Pictures/neeraj.jpeg",
+    about: "I am a biomedical engineer working in pharmaceutical manufacturing, specializing in process validation, quality systems, and regulatory compliance.\n\n\nBeyond my professional work, I’ve been deeply involved with nonprofits such as <a href=\"https://sochkoudaan.com/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:#2563eb;font-weight:600;\">Soch ko Udaan</a> and Engineers Without Borders, where I contribute to community outreach projects and awareness campaigns in Nepal and the U.S.\n\n\nEducation has always been at the heart of my pursuits; it’s the foundation that empowers individuals and transforms societies. I believe in Trinket for Education’s mission to strengthen the changing landscape of education in Nepal and am honored to support their vision as an advisor.",
+    socials: {
+      facebook: "https://www.facebook.com/neeraj.mishra.427061/",
+      instagram: "https://www.instagram.com/neeraj_mishra__?igsh=MTdjdGpjM283a3EyeQ%3D%3D&utm_source=qr",
+      linkedin: "https://www.linkedin.com/in/neeraj-mishra7/"
+    },
+    residence: "Madison, Wisconsin"
+  },
+  {
+    id: 9,
     name: "Binod Gurung",
     title: "Review Committee Member",
     email: "binod@trinketforeducation.org",
@@ -91,37 +137,19 @@ const team = [
     residence: "Tampa, Florida"
   },
   {
-    id: 7,
-    name: "Neeraj Mishra",
-    title: "Advisor",
-    email: "neeraj@trinketforeducation.org",
-    category: "Advisors",
-    photo: "/Pictures/neeraj.jpeg",
-    about: "Neeraj is a biomedical engineer working in pharmaceutical manufacturing, specializing in process validation, quality systems, and regulatory compliance. He volunteers with Soch ko Udaan and Engineers Without Borders to support community projects in Nepal and the U.S. Believing education is the foundation for societal change, he is honored to advise Trinket For Education’s mission.",
-    socials: {
-      facebook: "https://www.facebook.com/neeraj.mishra.427061/",
-      instagram: "https://www.instagram.com/neeraj_mishra__?igsh=MTdjdGpjM283a3EyeQ%3D%3D&utm_source=qr",
-      linkedin: "https://www.linkedin.com/in/neeraj-mishra7/"
-    },
-    residence: "Madison, Wisconsin"
+    id: 10,
+    name: "Suchi Saud",
+    title: "Volunteer",
+    email: "suchi@trinketforeducation.org",
+    category: "Volunteers",
+    photo: "/Pictures/Suchi.JPG",
+    photoClass: "object-center",
+    about: "Suchi Saud is a junior at Herndon High School in Virginia. She supports TFE outreach events, coordinates volunteer schedules, and helps younger students stay engaged with their studies.",
+    socials: {},
+    residence: "Herndon, Virginia"
   },
   {
-    id: 8,
-    name: "Tilak Bhatta",
-    title: "Advisor, Co-Founder",
-    email: "tilak@trinketforeducation.org",
-    category: "Advisors",
-    photo: "https://picsum.photos/id/1021/200/200",
-    about: "Provides guidance on education policy, ensuring programs align with community and government priorities.",
-    socials: {
-      facebook: "https://www.facebook.com/t.r.bhatta.11",
-      instagram: "https://www.instagram.com/tilak_raj.11?igsh=MWFyajQ2M2YxOTR3",
-      linkedin: "https://www.linkedin.com/in/tilakbhatta?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-    },
-    residence: "Charlotte, North Carolina"
-  },
-  {
-    id: 9,
+    id: 11,
     name: "KP Ghimire",
     title: "Researcher",
     email: "kp@trinketforeducation.org",
@@ -135,7 +163,7 @@ const team = [
     phone: "9851193520"
   },
   {
-    id: 10,
+    id: 12,
     name: "Sarada Dhakal",
     title: "Review Committee Member",
     email: "sarada@trinketforeducation.org",
@@ -144,17 +172,6 @@ const team = [
     about: "Sarada Dhakal brings years of experience mentoring teachers and reviewing curriculum pilots across Nepal. She helps TFE evaluate programs, track field feedback, and ensure research-backed recommendations reach classrooms.",
     socials: {},
     residence: "Kathmandu, Nepal"
-  },
-  {
-    id: 11,
-    name: "Suchi Saud",
-    title: "Volunteer",
-    email: "suchi@trinketforeducation.org",
-    category: "Volunteers",
-    photo: "https://picsum.photos/seed/suchi/200/200",
-    about: "Suchi Saud is a junior at Herndon High School in Virginia. She supports TFE outreach events, coordinates volunteer schedules, and helps younger students stay engaged with their studies.",
-    socials: {},
-    residence: "Herndon, Virginia"
   }
 ];
 
